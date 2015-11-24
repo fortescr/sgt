@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+
+	<persistence-unit name="SGT_3.2.x"
+		transaction-type="RESOURCE_LOCAL">
+		
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<mapping-file>META-INF/orm-queries.xml</mapping-file>
+
+		<properties>
+
+			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://192.168.0.165:5432/teste_v_3_1_0" />
+			<property name="hibernate.connection.username" value="senha" />
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.password" value="password" />
+		
+            <property name="hibernate.connection.provider"
+          		value="org.hibernate.connection.C3P0ConnectionProvider" />
+          	<property name="hibernate.c3p0.min_size" value="5" />
+		    <property name="hibernate.c3p0.max_size" value="100" />
+		    <property name="hibernate.c3p0.timeout" value="300" />
+		    <property name="hibernate.c3p0.max_statements" value="50" />
+		    <property name="hibernate.c3p0.idle_test_period" value="3000" />
+		    <property name="hibernate.c3p0.min_size" value="5" />
+		    <property name="hibernate.c3p0.max_size" value="100" />
+		    <property name="hibernate.c3p0.timeout" value="300" />
+		    <property name="hibernate.c3p0.max_statements" value="50" />
+		    <property name="hibernate.c3p0.idle_test_period" value="3000" />
+			
+		</properties>
+	
+	</persistence-unit>
+</persistence>

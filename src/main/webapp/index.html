@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="viewport" content="width=device-width" />
+
+        <title>SGT2</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="resources/themes/2015A/images/favicon.ico" />
+        
+        <script type="text/javascript" src="resources/js/vendors/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="resources/js/api/sgt2core-3.1.0.js"></script>
+        <script type="text/javascript" src="resources/js/api/repositories/sgt2-api-repository-userme-3.1.0.js"></script>
+        <script type="text/javascript" src="resources/js/api/entities/sgt2-api-entity-loggeduser-3.1.0.js"></script>
+        <script type="text/javascript" src="resources/js/api/entities/sgt2-api-entity-empresa-3.1.0.js"></script>
+        <script type="text/javascript" src="resources/js/api/entities/sgt2-api-requestretention-3.1.0.js"></script>
+        
+        <script type="text/javascript">
+        $(document).ready(function () {
+        	SGT2.getCurrentUser(function(currentUser) {
+    			window.location = SGT2.api.own.getBasePathApp() + '/page/empresa'
+    		}, function(error) {
+    			window.location = SGT2.api.own.getBasePathApp() + '/login.html';
+    		});
+        });
+        </script>
+    </head>
+    <body>
+    	<div id="redirect">
+    		<img id="logo" alt="SGT2" src="resources/themes/2015A/images/login/sgt2.png">
+	        <h2>Autenticando...</h2>
+    	</div>
+    </body>
+</html>
+
+<!-- 
+<a id="jqxWidgetdfaca3ab" href="../../rest/auth/logout" class="icon_logout" tooltip="Sair" position="bottom" onclick="return window.confirm('Tem certeza que deseja sair?');">&nbsp;</a>
+ -->
