@@ -11,7 +11,7 @@
 	<servlet>
 		<description></description>
 		<servlet-name>EntityManagerServlet</servlet-name>
-		<servlet-class>br.com.visaogeo.sgt2.persist.EntityManagerServlet</servlet-class>
+		<servlet-class>br.com.sgt.persist.EntityManagerServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
